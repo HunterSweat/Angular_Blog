@@ -3,8 +3,8 @@
     class Database {
         private $host = "127.0.0.1";
         private $database_name = "phpapidb";
-        private $username = "hunter";
-        private $password = "Maxandsam12@";
+        private $username = "username";
+        private $password = "password";
 
         public $conn;
 
