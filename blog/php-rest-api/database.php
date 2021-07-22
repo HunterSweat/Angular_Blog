@@ -31,6 +31,31 @@
             $stmt = $this->conn->prepare($sqlQuery);
             $stmt->execute();
             return $stmt;
+          
+          //Create Subscriber/Mailing List
+        public function createMail(){
+            $sqlQuery = "INSERT INTO".$this->db_table_mail."
+                SET
+                    name = :name,
+                    email = :email,
+                    created = :created";
+            
+            $stmt = $this->conn->prepare($sqlQuery);
+
+            //Sanitize
+            $this->name=htmlspecialchars(strip_tags($this->name));
+            $this->name=htmlspecialchars(strip_tags($this->email));
+            $this->name=htmlspecialchars(strip_tags($this->created));
+
+            //Bind Data
+            $stmt->bindParam(":name", $this->name);
+            $stmt->bindParam(":email", $this->email);
+            $stmt->bindParam(":created", $this->created);
+
+            if($stmt->execute()){
+                return true;
+            }
+            return false;
         }
     }
    
