@@ -29,7 +29,7 @@
                 "created" => $created
             );
 
-            array_push($blogArr["body"], $e);
+            array_push($blogArr, $e);
         }
         echo json_encode($blogArr);
         return $e;
