@@ -18,9 +18,7 @@
     if($itemCount > 0){
 
         $blogArr = array();
-        $blogArr["body"] = array();
-        $blogArr["itemCount"] = $itemCount;
-
+       
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             extract($row);
             $e = array(
