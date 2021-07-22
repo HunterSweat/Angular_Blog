@@ -2,8 +2,10 @@
     header('Access-Control-Allow-Orgin: *');
     class Database {
         private $host = "127.0.0.1";
+        //To do inject envvar
         private $database_name = "phpapidb";
         private $username = "username";
+        //To do inject envvar
         private $password = "password";
 
         public $conn;
