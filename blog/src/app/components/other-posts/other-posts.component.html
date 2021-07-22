@@ -1,0 +1,17 @@
+
+
+    <div class="card mb-4 h-100">
+        <a href="!#"><img class="card-img-top-other" src= "{{ post.link }}" /></a>
+        <div class="card-body">
+                <div class="small text-muted"> {{ post.created }} <app-discription-btn (btnClick) = "toggleDiscription($event)" [index] = index></app-discription-btn> </div>
+                <h2 class="card-title h4"> {{ post.title }}  </h2>
+                <div *ngIf="showDiscription">
+                    <p class="card-text"> {{ post.summary }} </p>
+                    <a class="btn btn-primary" href="#!">Read More -></a>
+                </div>
+        </div>   
+    </div>
+
+    
+
+  

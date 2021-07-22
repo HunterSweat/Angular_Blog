@@ -1,0 +1,25 @@
+
+
+    <div *ngIf="post.id === 'The Beginning'" id="test" class="card mb-4 h-100">
+        <img class="card-img-top" src="{{ post.link }}" />
+        <div class="card-body">
+            <div id="created" class="small text-muted">{{ post.created }} <app-discription-btn [index] = "index" (btnClick) = "toggleDiscription($event)"></app-discription-btn></div>
+            <h2 id="title_{{index}}" class="card-title">{{ post.id }}</h2> 
+            <div *ngIf="showDiscription">
+            <p id="summary" class="card-text" style="padding-bottom: 50px;">{{ post.summary }}</p>
+            <a class="btn btn-primary" href="app-blog-post">Read More -></a> 
+            </div>
+        </div>
+    </div>
+
+
+    
+        
+    
+
+
+
+    
+   
+
+
